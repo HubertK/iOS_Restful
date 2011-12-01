@@ -5,7 +5,10 @@
 //  Created by Helene Brooks on 11/30/11.
 //  Copyright (c) 2011 vaughn. All rights reserved.
 //
-#define kRootURL @"api.github.com/user/repos"
+#define kRootURL @"https://api.github.com"//----------Root URL for GITHUB API
+#define GitRepos @"/users/%@/repos"//-----------------Get all Repositories: ,username
+#define GitCommits @"/repos/%@/%@/commits"//----Get Commit for repository: ,username,repo
+
 #import "Base64.h"
 #import "GPDetailViewController.h"
 

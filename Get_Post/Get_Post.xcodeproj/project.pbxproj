@@ -23,6 +23,11 @@
 		398D7097148733CD009D1446 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 398D7090148733CD009D1446 /* zip.c */; };
 		398D7098148733CD009D1446 /* ZipArchive.mm in Sources */ = {isa = PBXBuildFile; fileRef = 398D7093148733CD009D1446 /* ZipArchive.mm */; };
 		398D709C1487465D009D1446 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 398D709B1487465D009D1446 /* Base64.m */; };
+		571C847E14880E8900C97DAC /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 571C847D14880E8900C97DAC /* icon.png */; };
+		571C84831488182800C97DAC /* checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 571C84801488182800C97DAC /* checkmark.png */; };
+		571C84851488182800C97DAC /* login2.png in Resources */ = {isa = PBXBuildFile; fileRef = 571C84821488182800C97DAC /* login2.png */; };
+		571C848B148825B200C97DAC /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = 571C848A148825B200C97DAC /* login.png */; };
+		571C848E148826A000C97DAC /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 571C848D148826A000C97DAC /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +60,12 @@
 		398D7093148733CD009D1446 /* ZipArchive.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZipArchive.mm; sourceTree = "<group>"; };
 		398D709A1487465D009D1446 /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
 		398D709B1487465D009D1446 /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
+		571C847D14880E8900C97DAC /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		571C84801488182800C97DAC /* checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmark.png; sourceTree = "<group>"; };
+		571C84821488182800C97DAC /* login2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login2.png; sourceTree = "<group>"; };
+		571C848A148825B200C97DAC /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
+		571C848C148826A000C97DAC /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		571C848D148826A000C97DAC /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +86,7 @@
 		398D70341486EBCF009D1446 = {
 			isa = PBXGroup;
 			children = (
+				571C847D14880E8900C97DAC /* icon.png */,
 				398D70491486EBCF009D1446 /* Get_Post */,
 				398D70421486EBCF009D1446 /* Frameworks */,
 				398D70401486EBCF009D1446 /* Products */,
@@ -110,6 +122,8 @@
 				398D70591486EBCF009D1446 /* GPMasterViewController.m */,
 				398D705B1486EBCF009D1446 /* GPDetailViewController.h */,
 				398D705C1486EBCF009D1446 /* GPDetailViewController.m */,
+				571C848C148826A000C97DAC /* LoginViewController.h */,
+				571C848D148826A000C97DAC /* LoginViewController.m */,
 				398D70991487465D009D1446 /* base64 */,
 				398D7087148733CD009D1446 /* ZipArchive */,
 				398D704A1486EBCF009D1446 /* Supporting Files */,
@@ -120,6 +134,9 @@
 		398D704A1486EBCF009D1446 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				571C84801488182800C97DAC /* checkmark.png */,
+				571C848A148825B200C97DAC /* login.png */,
+				571C84821488182800C97DAC /* login2.png */,
 				398D704B1486EBCF009D1446 /* Get_Post-Info.plist */,
 				398D704C1486EBCF009D1446 /* InfoPlist.strings */,
 				398D704F1486EBCF009D1446 /* main.m */,
@@ -216,6 +233,10 @@
 			files = (
 				398D704E1486EBCF009D1446 /* InfoPlist.strings in Resources */,
 				398D70571486EBCF009D1446 /* MainStoryboard.storyboard in Resources */,
+				571C847E14880E8900C97DAC /* icon.png in Resources */,
+				571C84831488182800C97DAC /* checkmark.png in Resources */,
+				571C84851488182800C97DAC /* login2.png in Resources */,
+				571C848B148825B200C97DAC /* login.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +257,7 @@
 				398D7097148733CD009D1446 /* zip.c in Sources */,
 				398D7098148733CD009D1446 /* ZipArchive.mm in Sources */,
 				398D709C1487465D009D1446 /* Base64.m in Sources */,
+				571C848E148826A000C97DAC /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +371,7 @@
 				398D70621486EBCF009D1446 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
