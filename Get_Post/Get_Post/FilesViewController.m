@@ -9,6 +9,7 @@
 #import "FilesViewController.h"
 #import "HTMLViewController.h"
 #import "Base64.h"
+#import "FileCell.h"
 
 @implementation FilesViewController
 
@@ -36,7 +37,7 @@
 {
     [super viewDidLoad];
     self.tableView.backgroundView = [[UIView alloc]init];
-    self.tableView.backgroundColor  = [UIColor colorWithPatternImage:[UIImage imageNamed:@"pat.png"]];
+    self.tableView.backgroundColor  = [UIColor colorWithPatternImage:[UIImage imageNamed:@"subtlePat1.png"]];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -94,24 +95,33 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"FileCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    FileCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[FileCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    cell.textLabel.text = [[files valueForKey:@"path"]objectAtIndex:indexPath.section];
+    cell.nameOfFile.text = [[files valueForKey:@"path"]objectAtIndex:indexPath.section];
     NSString *type = [[files valueForKey:@"type"]objectAtIndex:indexPath.section];
     if ([type isEqualToString:@"tree"]) {
-        cell.imageView.image = [UIImage imageNamed:@"folder.png"];
+        cell.fileImage.image = [UIImage imageNamed:@"folder.png"];
     }
     else{
-        cell.imageView.image = nil;
+        cell.fileImage.image = nil;
     }
     return cell;
 }
-
+- (float)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 0;
+}
+- (float)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 52;
+}
+- (UIView*)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    UIImageView *sep = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"seperator.png"]];
+    return sep;
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath

@@ -69,6 +69,11 @@
 		571C84851488182800C97DAC /* login2.png in Resources */ = {isa = PBXBuildFile; fileRef = 571C84821488182800C97DAC /* login2.png */; };
 		571C848B148825B200C97DAC /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = 571C848A148825B200C97DAC /* login.png */; };
 		571C848E148826A000C97DAC /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 571C848D148826A000C97DAC /* LoginViewController.m */; };
+		575C0B68148EC06100108833 /* seperator.png in Resources */ = {isa = PBXBuildFile; fileRef = 575C0B64148EC06100108833 /* seperator.png */; };
+		575C0B69148EC06100108833 /* footer.png in Resources */ = {isa = PBXBuildFile; fileRef = 575C0B65148EC06100108833 /* footer.png */; };
+		575C0B6A148EC06100108833 /* subtlePat1.png in Resources */ = {isa = PBXBuildFile; fileRef = 575C0B66148EC06100108833 /* subtlePat1.png */; };
+		575C0B6B148EC06100108833 /* subtlePat2.png in Resources */ = {isa = PBXBuildFile; fileRef = 575C0B67148EC06100108833 /* subtlePat2.png */; };
+		575C0B6F148EC26F00108833 /* FileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C0B6E148EC26F00108833 /* FileCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -154,6 +159,12 @@
 		571C848A148825B200C97DAC /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
 		571C848C148826A000C97DAC /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		571C848D148826A000C97DAC /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		575C0B64148EC06100108833 /* seperator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seperator.png; sourceTree = "<group>"; };
+		575C0B65148EC06100108833 /* footer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = footer.png; sourceTree = "<group>"; };
+		575C0B66148EC06100108833 /* subtlePat1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = subtlePat1.png; sourceTree = "<group>"; };
+		575C0B67148EC06100108833 /* subtlePat2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = subtlePat2.png; sourceTree = "<group>"; };
+		575C0B6D148EC26E00108833 /* FileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileCell.h; sourceTree = "<group>"; };
+		575C0B6E148EC26F00108833 /* FileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +235,8 @@
 				39B211BB14887E730049E014 /* UserInfoViewController.m */,
 				39B21211148B16340049E014 /* CommitCell.h */,
 				39B21212148B16340049E014 /* CommitCell.m */,
+				575C0B6D148EC26E00108833 /* FileCell.h */,
+				575C0B6E148EC26F00108833 /* FileCell.m */,
 				39B21221148B35E50049E014 /* ISO8601DateFormatter.h */,
 				39B21222148B35E50049E014 /* ISO8601DateFormatter.m */,
 				39B212C1148D63FE0049E014 /* google-code-prettify 2 */,
@@ -237,6 +250,10 @@
 		398D704A1486EBCF009D1446 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				575C0B64148EC06100108833 /* seperator.png */,
+				575C0B65148EC06100108833 /* footer.png */,
+				575C0B66148EC06100108833 /* subtlePat1.png */,
+				575C0B67148EC06100108833 /* subtlePat2.png */,
 				39B212EA148D67210049E014 /* blueprint.png */,
 				39B212BC148D57140049E014 /* box1.png */,
 				39B212BF148D60C50049E014 /* pencil.png */,
@@ -415,6 +432,10 @@
 				39B212C0148D60C50049E014 /* pencil.png in Resources */,
 				39B212E8148D63FE0049E014 /* prettify.css in Resources */,
 				39B212EB148D67210049E014 /* blueprint.png in Resources */,
+				575C0B68148EC06100108833 /* seperator.png in Resources */,
+				575C0B69148EC06100108833 /* footer.png in Resources */,
+				575C0B6A148EC06100108833 /* subtlePat1.png in Resources */,
+				575C0B6B148EC06100108833 /* subtlePat2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +463,7 @@
 				39B2121A148B1F710049E014 /* FilesViewController.m in Sources */,
 				39B21223148B35E50049E014 /* ISO8601DateFormatter.m in Sources */,
 				39B212F2148D67DF0049E014 /* HTMLViewController.m in Sources */,
+				575C0B6F148EC26F00108833 /* FileCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -33,7 +33,7 @@
 - (void)viewDidLoad
 {
     self.tableView.backgroundView = [[UIView alloc]init];
-    self.tableView.backgroundColor  = [UIColor blackColor];
+    self.tableView.backgroundColor  = [UIColor colorWithPatternImage:[UIImage imageNamed:@"subtlePat2.png"]];
     self.repoDictionary = [[NSMutableDictionary alloc]init];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(allReposNotification:) name:@"AllReposNotification" object:nil];
     [super viewDidLoad];
