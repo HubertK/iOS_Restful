@@ -16,7 +16,15 @@
 @property (strong, nonatomic) NSMutableString *URLString;
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *logButton;
 @property (weak, nonatomic) NSURLConnection *URLConnection;
+
+
+
+
+
+
 - (IBAction)changedPrivateSwitch:(id)sender;
 - (IBAction)sendRequestForNewRepository:(id)sender;
+- (IBAction)logInOut:(id)sender;
 @end

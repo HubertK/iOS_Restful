@@ -8,10 +8,10 @@
 #define kRootURL @"https://api.github.com"//----------Root URL for GITHUB API
 #define GitRepos @"/users/%@/repos"//-----------------Get all Repositories: ,username
 #define GitCommits @"/repos/%@/%@/commits"//----Get Commit for repository: ,username,repo
-
+#import "HTMLViewController.h"
 #import "Base64.h"
 #import "GPDetailViewController.h"
-
+#import "LoginViewController.h"
 @interface GPDetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
 - (void)configureView;
@@ -25,6 +25,7 @@
 @synthesize URLString;
 @synthesize nameField = _nameField;
 @synthesize descriptionView = _descriptionView;
+@synthesize logButton = _logButton;
 @synthesize URLConnection;
 #pragma mark - Managing the detail item
 bool isPrivate;
@@ -61,22 +62,24 @@ bool isPrivate;
 
 - (void)viewDidLoad
 {
-    NSFileManager *filemgr;
-    NSString *currentpath;
-    NSArray *filelist;
-    int count;
-    int i;
-    NSError *error;
-    
-    filemgr = [NSFileManager defaultManager];
-    filelist = [filemgr contentsOfDirectoryAtPath:@"/tmp" error:&error];
-    
-    count = [filelist count];
-    
-    for (i = 0; i < count; i++)
-        NSLog (@"%@", [filelist objectAtIndex: i]);
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(received:) name:@"PushHTMLView" object:nil];
 
+//    NSFileManager *filemgr;
+//    NSString *currentpath;
+//    NSArray *filelist;
+//    int count;
+//    int i;
+//    NSError *error;
+//    
+//    filemgr = [NSFileManager defaultManager];
+//    filelist = [filemgr contentsOfDirectoryAtPath:@"/tmp" error:&error];
+//    
+//    count = [filelist count];
+//    
+//    for (i = 0; i < count; i++)
+//        NSLog (@"%@", [filelist objectAtIndex: i]);
     
+    NSError *error = nil;
     self.URLString = [[NSMutableString alloc]initWithFormat:kRootURL];
     [self.URLString appendString:@"/user/repos"];
 //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
@@ -96,15 +99,31 @@ bool isPrivate;
     NSString * actualString = [[NSString alloc] initWithData:data2 encoding:NSUTF8StringEncoding];
     NSLog(@"Actual:%@",actualString);
 //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-    [super viewDidLoad];
+      [super viewDidLoad];
+    
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
 }
+- (void)received:(NSNotification*)notification{
+    NSLog(@"HTML in detail notification");
+    if ([[notification.userInfo valueForKey:@"isText"]isEqualToNumber:[NSNumber numberWithBool:YES]]) {
+        
+    NSString *content = [notification.userInfo valueForKey:@"content"];
+    UIStoryboard *story = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+    HTMLViewController *controller = [story instantiateViewControllerWithIdentifier:@"HTMLViewController"];
+    [controller setContent:content];
+    [self presentModalViewController:controller animated:YES];
+    }
+   else if ([[notification.userInfo valueForKey:@"isText"]isEqualToNumber:[NSNumber numberWithBool:NO]]) {
+        
+    }
 
+}
 - (void)viewDidUnload
 {
     [self setNameField:nil];
     [self setDescriptionView:nil];
+    [self setLogButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -112,6 +131,11 @@ bool isPrivate;
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
+    if ([defaults boolForKey:@"savedPassword"] == YES) {
+        [self.logButton setTitle:@"Sign Out"];
+    }
+
     [super viewWillAppear:animated];
 }
 
@@ -185,6 +209,26 @@ bool isPrivate;
     
 }
 
+- (IBAction)logInOut:(id)sender {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+    LoginViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+    
+    NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
+    if ([defaults boolForKey:@"savedPassword"] == YES) {
+        [defaults setBool:NO forKey:@"savedPassword"];
+        [defaults removeObjectForKey:@"username"];
+        [defaults removeObjectForKey:@"password"];
+        UIAlertView *logOutAlert = [[UIAlertView alloc]initWithTitle:@"Logged Out" message:@"You have been signed out" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [logOutAlert show];
+        [self.logButton setTitle:@"Login"];
+       
+    }
+    else{
+        [self.navigationController pushViewController:controller animated:YES];
+    }
+
+}
+
 
 
 -(void) connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response{
@@ -225,11 +269,11 @@ bool isPrivate;
 
 -(void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
 {    
-    NSLog(@"Auth");
-    NSString *username;     //Add NSUserDefaults
-    NSString *password;     //for username and password!!
+    NSLog(@"Authentication Challenge");
+    NSString *username = [[NSUserDefaults standardUserDefaults]valueForKey:@"username"];    
+    NSString *password = [[NSUserDefaults standardUserDefaults]valueForKey:@"password"]; 
     
-    NSURLCredential *credential = [NSURLCredential credentialWithUser:@"hubertk" password:@"hbrooks16" persistence:NSURLCredentialPersistenceForSession];
+    NSURLCredential *credential = [NSURLCredential credentialWithUser:username password:password persistence:NSURLCredentialPersistenceForSession];
 	[[challenge sender] useCredential:credential forAuthenticationChallenge:challenge];
 } 
 

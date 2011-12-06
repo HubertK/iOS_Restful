@@ -13,5 +13,9 @@
 @interface GPMasterViewController : UITableViewController
 
 @property (strong, nonatomic) GPDetailViewController *detailViewController;
+@property (strong, nonatomic) NSMutableDictionary *repoDictionary;
+@property (strong, nonatomic) NSString *repoPicked;
+@property (weak, nonatomic) NSURLConnection *URLConnection;
 
+- (void)getCommitsForRepo:(NSString*)repo;
 @end

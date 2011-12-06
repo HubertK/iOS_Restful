@@ -23,6 +23,47 @@
 		398D7097148733CD009D1446 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 398D7090148733CD009D1446 /* zip.c */; };
 		398D7098148733CD009D1446 /* ZipArchive.mm in Sources */ = {isa = PBXBuildFile; fileRef = 398D7093148733CD009D1446 /* ZipArchive.mm */; };
 		398D709C1487465D009D1446 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 398D709B1487465D009D1446 /* Base64.m */; };
+		39B211AC14885F370049E014 /* infoBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 39B211AB14885F370049E014 /* infoBack.png */; };
+		39B211B414885F870049E014 /* 200px-GitHub.png in Resources */ = {isa = PBXBuildFile; fileRef = 39B211B214885F870049E014 /* 200px-GitHub.png */; };
+		39B211B514885F870049E014 /* github-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 39B211B314885F870049E014 /* github-logo.png */; };
+		39B211BC14887E730049E014 /* UserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B211BB14887E730049E014 /* UserInfoViewController.m */; };
+		39B211BF148899DC0049E014 /* arrow2.png in Resources */ = {isa = PBXBuildFile; fileRef = 39B211BD148899DC0049E014 /* arrow2.png */; };
+		39B211C0148899DC0049E014 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 39B211BE148899DC0049E014 /* arrow.png */; };
+		39B21213148B16340049E014 /* CommitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B21212148B16340049E014 /* CommitCell.m */; };
+		39B21217148B16BE0049E014 /* CommitsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B21216148B16BE0049E014 /* CommitsViewController.m */; };
+		39B2121A148B1F710049E014 /* FilesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B21219148B1F710049E014 /* FilesViewController.m */; };
+		39B21220148B26CF0049E014 /* folder.png in Resources */ = {isa = PBXBuildFile; fileRef = 39B2121F148B26CF0049E014 /* folder.png */; };
+		39B21223148B35E50049E014 /* ISO8601DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B21222148B35E50049E014 /* ISO8601DateFormatter.m */; };
+		39B21225148B435A0049E014 /* pat.png in Resources */ = {isa = PBXBuildFile; fileRef = 39B21224148B435A0049E014 /* pat.png */; };
+		39B212A6148C421A0049E014 /* githubHeader.png in Resources */ = {isa = PBXBuildFile; fileRef = 39B212A5148C421A0049E014 /* githubHeader.png */; };
+		39B212AB148C593A0049E014 /* blackboardBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 39B212AA148C593A0049E014 /* blackboardBack.png */; };
+		39B212AD148C5BDD0049E014 /* Polaroid_Frame.png in Resources */ = {isa = PBXBuildFile; fileRef = 39B212AC148C5BDC0049E014 /* Polaroid_Frame.png */; };
+		39B212AF148C5E4B0049E014 /* polaroid2.png in Resources */ = {isa = PBXBuildFile; fileRef = 39B212AE148C5E4B0049E014 /* polaroid2.png */; };
+		39B212BD148D57140049E014 /* box1.png in Resources */ = {isa = PBXBuildFile; fileRef = 39B212BC148D57140049E014 /* box1.png */; };
+		39B212C0148D60C50049E014 /* pencil.png in Resources */ = {isa = PBXBuildFile; fileRef = 39B212BF148D60C50049E014 /* pencil.png */; };
+		39B212D6148D63FE0049E014 /* lang-apollo.js in Resources */ = {isa = PBXBuildFile; fileRef = 39B212C2148D63FE0049E014 /* lang-apollo.js */; };
+		39B212D7148D63FE0049E014 /* lang-clj.js in Resources */ = {isa = PBXBuildFile; fileRef = 39B212C3148D63FE0049E014 /* lang-clj.js */; };
+		39B212D8148D63FE0049E014 /* lang-css.js in Resources */ = {isa = PBXBuildFile; fileRef = 39B212C4148D63FE0049E014 /* lang-css.js */; };
+		39B212D9148D63FE0049E014 /* lang-go.js in Resources */ = {isa = PBXBuildFile; fileRef = 39B212C5148D63FE0049E014 /* lang-go.js */; };
+		39B212DA148D63FE0049E014 /* lang-hs.js in Resources */ = {isa = PBXBuildFile; fileRef = 39B212C6148D63FE0049E014 /* lang-hs.js */; };
+		39B212DB148D63FE0049E014 /* lang-lisp.js in Resources */ = {isa = PBXBuildFile; fileRef = 39B212C7148D63FE0049E014 /* lang-lisp.js */; };
+		39B212DC148D63FE0049E014 /* lang-lua.js in Resources */ = {isa = PBXBuildFile; fileRef = 39B212C8148D63FE0049E014 /* lang-lua.js */; };
+		39B212DD148D63FE0049E014 /* lang-ml.js in Resources */ = {isa = PBXBuildFile; fileRef = 39B212C9148D63FE0049E014 /* lang-ml.js */; };
+		39B212DE148D63FE0049E014 /* lang-n.js in Resources */ = {isa = PBXBuildFile; fileRef = 39B212CA148D63FE0049E014 /* lang-n.js */; };
+		39B212DF148D63FE0049E014 /* lang-proto.js in Resources */ = {isa = PBXBuildFile; fileRef = 39B212CB148D63FE0049E014 /* lang-proto.js */; };
+		39B212E0148D63FE0049E014 /* lang-scala.js in Resources */ = {isa = PBXBuildFile; fileRef = 39B212CC148D63FE0049E014 /* lang-scala.js */; };
+		39B212E1148D63FE0049E014 /* lang-sql.js in Resources */ = {isa = PBXBuildFile; fileRef = 39B212CD148D63FE0049E014 /* lang-sql.js */; };
+		39B212E2148D63FE0049E014 /* lang-tex.js in Resources */ = {isa = PBXBuildFile; fileRef = 39B212CE148D63FE0049E014 /* lang-tex.js */; };
+		39B212E3148D63FE0049E014 /* lang-vb.js in Resources */ = {isa = PBXBuildFile; fileRef = 39B212CF148D63FE0049E014 /* lang-vb.js */; };
+		39B212E4148D63FE0049E014 /* lang-vhdl.js in Resources */ = {isa = PBXBuildFile; fileRef = 39B212D0148D63FE0049E014 /* lang-vhdl.js */; };
+		39B212E5148D63FE0049E014 /* lang-wiki.js in Resources */ = {isa = PBXBuildFile; fileRef = 39B212D1148D63FE0049E014 /* lang-wiki.js */; };
+		39B212E6148D63FE0049E014 /* lang-xq.js in Resources */ = {isa = PBXBuildFile; fileRef = 39B212D2148D63FE0049E014 /* lang-xq.js */; };
+		39B212E7148D63FE0049E014 /* lang-yaml.js in Resources */ = {isa = PBXBuildFile; fileRef = 39B212D3148D63FE0049E014 /* lang-yaml.js */; };
+		39B212E8148D63FE0049E014 /* prettify.css in Resources */ = {isa = PBXBuildFile; fileRef = 39B212D4148D63FE0049E014 /* prettify.css */; };
+		39B212E9148D63FE0049E014 /* prettify.js in Resources */ = {isa = PBXBuildFile; fileRef = 39B212D5148D63FE0049E014 /* prettify.js */; };
+		39B212EB148D67210049E014 /* blueprint.png in Resources */ = {isa = PBXBuildFile; fileRef = 39B212EA148D67210049E014 /* blueprint.png */; };
+		39B212F2148D67DF0049E014 /* HTMLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B212F1148D67DF0049E014 /* HTMLViewController.m */; };
+		39B212F4148D68520049E014 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39B212F3148D68520049E014 /* QuartzCore.framework */; };
 		571C847E14880E8900C97DAC /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 571C847D14880E8900C97DAC /* icon.png */; };
 		571C84831488182800C97DAC /* checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 571C84801488182800C97DAC /* checkmark.png */; };
 		571C84851488182800C97DAC /* login2.png in Resources */ = {isa = PBXBuildFile; fileRef = 571C84821488182800C97DAC /* login2.png */; };
@@ -60,6 +101,53 @@
 		398D7093148733CD009D1446 /* ZipArchive.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZipArchive.mm; sourceTree = "<group>"; };
 		398D709A1487465D009D1446 /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
 		398D709B1487465D009D1446 /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
+		39B211AB14885F370049E014 /* infoBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = infoBack.png; sourceTree = "<group>"; };
+		39B211B214885F870049E014 /* 200px-GitHub.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "200px-GitHub.png"; sourceTree = "<group>"; };
+		39B211B314885F870049E014 /* github-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "github-logo.png"; sourceTree = "<group>"; };
+		39B211BA14887E730049E014 /* UserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoViewController.h; sourceTree = "<group>"; };
+		39B211BB14887E730049E014 /* UserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoViewController.m; sourceTree = "<group>"; };
+		39B211BD148899DC0049E014 /* arrow2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow2.png; sourceTree = "<group>"; };
+		39B211BE148899DC0049E014 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		39B21211148B16340049E014 /* CommitCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommitCell.h; sourceTree = "<group>"; };
+		39B21212148B16340049E014 /* CommitCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommitCell.m; sourceTree = "<group>"; };
+		39B21215148B16BE0049E014 /* CommitsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommitsViewController.h; sourceTree = "<group>"; };
+		39B21216148B16BE0049E014 /* CommitsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommitsViewController.m; sourceTree = "<group>"; };
+		39B21218148B1F710049E014 /* FilesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilesViewController.h; sourceTree = "<group>"; };
+		39B21219148B1F710049E014 /* FilesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilesViewController.m; sourceTree = "<group>"; };
+		39B2121F148B26CF0049E014 /* folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = folder.png; sourceTree = "<group>"; };
+		39B21221148B35E50049E014 /* ISO8601DateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISO8601DateFormatter.h; sourceTree = "<group>"; };
+		39B21222148B35E50049E014 /* ISO8601DateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISO8601DateFormatter.m; sourceTree = "<group>"; };
+		39B21224148B435A0049E014 /* pat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pat.png; sourceTree = "<group>"; };
+		39B212A5148C421A0049E014 /* githubHeader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = githubHeader.png; sourceTree = "<group>"; };
+		39B212AA148C593A0049E014 /* blackboardBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackboardBack.png; sourceTree = "<group>"; };
+		39B212AC148C5BDC0049E014 /* Polaroid_Frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Polaroid_Frame.png; sourceTree = "<group>"; };
+		39B212AE148C5E4B0049E014 /* polaroid2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = polaroid2.png; sourceTree = "<group>"; };
+		39B212BC148D57140049E014 /* box1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = box1.png; sourceTree = "<group>"; };
+		39B212BF148D60C50049E014 /* pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pencil.png; sourceTree = "<group>"; };
+		39B212C2148D63FE0049E014 /* lang-apollo.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "lang-apollo.js"; sourceTree = "<group>"; };
+		39B212C3148D63FE0049E014 /* lang-clj.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "lang-clj.js"; sourceTree = "<group>"; };
+		39B212C4148D63FE0049E014 /* lang-css.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "lang-css.js"; sourceTree = "<group>"; };
+		39B212C5148D63FE0049E014 /* lang-go.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "lang-go.js"; sourceTree = "<group>"; };
+		39B212C6148D63FE0049E014 /* lang-hs.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "lang-hs.js"; sourceTree = "<group>"; };
+		39B212C7148D63FE0049E014 /* lang-lisp.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "lang-lisp.js"; sourceTree = "<group>"; };
+		39B212C8148D63FE0049E014 /* lang-lua.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "lang-lua.js"; sourceTree = "<group>"; };
+		39B212C9148D63FE0049E014 /* lang-ml.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "lang-ml.js"; sourceTree = "<group>"; };
+		39B212CA148D63FE0049E014 /* lang-n.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "lang-n.js"; sourceTree = "<group>"; };
+		39B212CB148D63FE0049E014 /* lang-proto.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "lang-proto.js"; sourceTree = "<group>"; };
+		39B212CC148D63FE0049E014 /* lang-scala.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "lang-scala.js"; sourceTree = "<group>"; };
+		39B212CD148D63FE0049E014 /* lang-sql.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "lang-sql.js"; sourceTree = "<group>"; };
+		39B212CE148D63FE0049E014 /* lang-tex.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "lang-tex.js"; sourceTree = "<group>"; };
+		39B212CF148D63FE0049E014 /* lang-vb.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "lang-vb.js"; sourceTree = "<group>"; };
+		39B212D0148D63FE0049E014 /* lang-vhdl.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "lang-vhdl.js"; sourceTree = "<group>"; };
+		39B212D1148D63FE0049E014 /* lang-wiki.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "lang-wiki.js"; sourceTree = "<group>"; };
+		39B212D2148D63FE0049E014 /* lang-xq.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "lang-xq.js"; sourceTree = "<group>"; };
+		39B212D3148D63FE0049E014 /* lang-yaml.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "lang-yaml.js"; sourceTree = "<group>"; };
+		39B212D4148D63FE0049E014 /* prettify.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = prettify.css; sourceTree = "<group>"; };
+		39B212D5148D63FE0049E014 /* prettify.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = prettify.js; sourceTree = "<group>"; };
+		39B212EA148D67210049E014 /* blueprint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueprint.png; sourceTree = "<group>"; };
+		39B212F0148D67DF0049E014 /* HTMLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLViewController.h; sourceTree = "<group>"; };
+		39B212F1148D67DF0049E014 /* HTMLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLViewController.m; sourceTree = "<group>"; };
+		39B212F3148D68520049E014 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		571C847D14880E8900C97DAC /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		571C84801488182800C97DAC /* checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmark.png; sourceTree = "<group>"; };
 		571C84821488182800C97DAC /* login2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login2.png; sourceTree = "<group>"; };
@@ -73,6 +161,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39B212F4148D68520049E014 /* QuartzCore.framework in Frameworks */,
 				398D708614873224009D1446 /* libz.1.1.3.dylib in Frameworks */,
 				398D70441486EBCF009D1446 /* UIKit.framework in Frameworks */,
 				398D70461486EBCF009D1446 /* Foundation.framework in Frameworks */,
@@ -104,6 +193,7 @@
 		398D70421486EBCF009D1446 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				39B212F3148D68520049E014 /* QuartzCore.framework */,
 				398D708514873224009D1446 /* libz.1.1.3.dylib */,
 				398D70431486EBCF009D1446 /* UIKit.framework */,
 				398D70451486EBCF009D1446 /* Foundation.framework */,
@@ -118,12 +208,25 @@
 				398D70521486EBCF009D1446 /* GPAppDelegate.h */,
 				398D70531486EBCF009D1446 /* GPAppDelegate.m */,
 				398D70551486EBCF009D1446 /* MainStoryboard.storyboard */,
+				39B212F0148D67DF0049E014 /* HTMLViewController.h */,
+				39B212F1148D67DF0049E014 /* HTMLViewController.m */,
+				39B21218148B1F710049E014 /* FilesViewController.h */,
+				39B21219148B1F710049E014 /* FilesViewController.m */,
 				398D70581486EBCF009D1446 /* GPMasterViewController.h */,
 				398D70591486EBCF009D1446 /* GPMasterViewController.m */,
+				39B21215148B16BE0049E014 /* CommitsViewController.h */,
+				39B21216148B16BE0049E014 /* CommitsViewController.m */,
 				398D705B1486EBCF009D1446 /* GPDetailViewController.h */,
 				398D705C1486EBCF009D1446 /* GPDetailViewController.m */,
 				571C848C148826A000C97DAC /* LoginViewController.h */,
 				571C848D148826A000C97DAC /* LoginViewController.m */,
+				39B211BA14887E730049E014 /* UserInfoViewController.h */,
+				39B211BB14887E730049E014 /* UserInfoViewController.m */,
+				39B21211148B16340049E014 /* CommitCell.h */,
+				39B21212148B16340049E014 /* CommitCell.m */,
+				39B21221148B35E50049E014 /* ISO8601DateFormatter.h */,
+				39B21222148B35E50049E014 /* ISO8601DateFormatter.m */,
+				39B212C1148D63FE0049E014 /* google-code-prettify 2 */,
 				398D70991487465D009D1446 /* base64 */,
 				398D7087148733CD009D1446 /* ZipArchive */,
 				398D704A1486EBCF009D1446 /* Supporting Files */,
@@ -134,6 +237,20 @@
 		398D704A1486EBCF009D1446 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				39B212EA148D67210049E014 /* blueprint.png */,
+				39B212BC148D57140049E014 /* box1.png */,
+				39B212BF148D60C50049E014 /* pencil.png */,
+				39B21224148B435A0049E014 /* pat.png */,
+				39B212AA148C593A0049E014 /* blackboardBack.png */,
+				39B212AC148C5BDC0049E014 /* Polaroid_Frame.png */,
+				39B212AE148C5E4B0049E014 /* polaroid2.png */,
+				39B212A5148C421A0049E014 /* githubHeader.png */,
+				39B2121F148B26CF0049E014 /* folder.png */,
+				39B211BD148899DC0049E014 /* arrow2.png */,
+				39B211BE148899DC0049E014 /* arrow.png */,
+				39B211B214885F870049E014 /* 200px-GitHub.png */,
+				39B211B314885F870049E014 /* github-logo.png */,
+				39B211AB14885F370049E014 /* infoBack.png */,
 				571C84801488182800C97DAC /* checkmark.png */,
 				571C848A148825B200C97DAC /* login.png */,
 				571C84821488182800C97DAC /* login2.png */,
@@ -178,6 +295,33 @@
 				398D709B1487465D009D1446 /* Base64.m */,
 			);
 			path = base64;
+			sourceTree = "<group>";
+		};
+		39B212C1148D63FE0049E014 /* google-code-prettify 2 */ = {
+			isa = PBXGroup;
+			children = (
+				39B212C2148D63FE0049E014 /* lang-apollo.js */,
+				39B212C3148D63FE0049E014 /* lang-clj.js */,
+				39B212C4148D63FE0049E014 /* lang-css.js */,
+				39B212C5148D63FE0049E014 /* lang-go.js */,
+				39B212C6148D63FE0049E014 /* lang-hs.js */,
+				39B212C7148D63FE0049E014 /* lang-lisp.js */,
+				39B212C8148D63FE0049E014 /* lang-lua.js */,
+				39B212C9148D63FE0049E014 /* lang-ml.js */,
+				39B212CA148D63FE0049E014 /* lang-n.js */,
+				39B212CB148D63FE0049E014 /* lang-proto.js */,
+				39B212CC148D63FE0049E014 /* lang-scala.js */,
+				39B212CD148D63FE0049E014 /* lang-sql.js */,
+				39B212CE148D63FE0049E014 /* lang-tex.js */,
+				39B212CF148D63FE0049E014 /* lang-vb.js */,
+				39B212D0148D63FE0049E014 /* lang-vhdl.js */,
+				39B212D1148D63FE0049E014 /* lang-wiki.js */,
+				39B212D2148D63FE0049E014 /* lang-xq.js */,
+				39B212D3148D63FE0049E014 /* lang-yaml.js */,
+				39B212D4148D63FE0049E014 /* prettify.css */,
+				39B212D5148D63FE0049E014 /* prettify.js */,
+			);
+			path = "google-code-prettify 2";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,12 +375,46 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39B212D6148D63FE0049E014 /* lang-apollo.js in Resources */,
+				39B212D7148D63FE0049E014 /* lang-clj.js in Resources */,
+				39B212D8148D63FE0049E014 /* lang-css.js in Resources */,
+				39B212D9148D63FE0049E014 /* lang-go.js in Resources */,
+				39B212DA148D63FE0049E014 /* lang-hs.js in Resources */,
+				39B212DB148D63FE0049E014 /* lang-lisp.js in Resources */,
+				39B212DC148D63FE0049E014 /* lang-lua.js in Resources */,
+				39B212DD148D63FE0049E014 /* lang-ml.js in Resources */,
+				39B212DE148D63FE0049E014 /* lang-n.js in Resources */,
+				39B212DF148D63FE0049E014 /* lang-proto.js in Resources */,
+				39B212E0148D63FE0049E014 /* lang-scala.js in Resources */,
+				39B212E1148D63FE0049E014 /* lang-sql.js in Resources */,
+				39B212E2148D63FE0049E014 /* lang-tex.js in Resources */,
+				39B212E3148D63FE0049E014 /* lang-vb.js in Resources */,
+				39B212E4148D63FE0049E014 /* lang-vhdl.js in Resources */,
+				39B212E5148D63FE0049E014 /* lang-wiki.js in Resources */,
+				39B212E6148D63FE0049E014 /* lang-xq.js in Resources */,
+				39B212E7148D63FE0049E014 /* lang-yaml.js in Resources */,
+				39B212E9148D63FE0049E014 /* prettify.js in Resources */,
 				398D704E1486EBCF009D1446 /* InfoPlist.strings in Resources */,
 				398D70571486EBCF009D1446 /* MainStoryboard.storyboard in Resources */,
 				571C847E14880E8900C97DAC /* icon.png in Resources */,
 				571C84831488182800C97DAC /* checkmark.png in Resources */,
 				571C84851488182800C97DAC /* login2.png in Resources */,
 				571C848B148825B200C97DAC /* login.png in Resources */,
+				39B211AC14885F370049E014 /* infoBack.png in Resources */,
+				39B211B414885F870049E014 /* 200px-GitHub.png in Resources */,
+				39B211B514885F870049E014 /* github-logo.png in Resources */,
+				39B211BF148899DC0049E014 /* arrow2.png in Resources */,
+				39B211C0148899DC0049E014 /* arrow.png in Resources */,
+				39B21220148B26CF0049E014 /* folder.png in Resources */,
+				39B21225148B435A0049E014 /* pat.png in Resources */,
+				39B212A6148C421A0049E014 /* githubHeader.png in Resources */,
+				39B212AB148C593A0049E014 /* blackboardBack.png in Resources */,
+				39B212AD148C5BDD0049E014 /* Polaroid_Frame.png in Resources */,
+				39B212AF148C5E4B0049E014 /* polaroid2.png in Resources */,
+				39B212BD148D57140049E014 /* box1.png in Resources */,
+				39B212C0148D60C50049E014 /* pencil.png in Resources */,
+				39B212E8148D63FE0049E014 /* prettify.css in Resources */,
+				39B212EB148D67210049E014 /* blueprint.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +436,12 @@
 				398D7098148733CD009D1446 /* ZipArchive.mm in Sources */,
 				398D709C1487465D009D1446 /* Base64.m in Sources */,
 				571C848E148826A000C97DAC /* LoginViewController.m in Sources */,
+				39B211BC14887E730049E014 /* UserInfoViewController.m in Sources */,
+				39B21213148B16340049E014 /* CommitCell.m in Sources */,
+				39B21217148B16BE0049E014 /* CommitsViewController.m in Sources */,
+				39B2121A148B1F710049E014 /* FilesViewController.m in Sources */,
+				39B21223148B35E50049E014 /* ISO8601DateFormatter.m in Sources */,
+				39B212F2148D67DF0049E014 /* HTMLViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

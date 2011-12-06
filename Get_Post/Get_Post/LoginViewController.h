@@ -18,4 +18,5 @@
 - (IBAction)savePassword:(id)sender;
 - (IBAction)loginInWithCredentials:(id)sender;
 - (IBAction)signUpForGithubAccount:(id)sender;
+- (void)loggedIn;
 @end

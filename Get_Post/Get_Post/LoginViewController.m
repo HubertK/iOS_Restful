@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "UserInfoViewController.h"
 
 @implementation LoginViewController
 @synthesize usernameField;
@@ -106,7 +107,7 @@
     [defaults setValue:self.password forKey:@"password"];
     [defaults synchronize];
     }
-    
+    [self loggedIn];
 }
 
 - (IBAction)signUpForGithubAccount:(id)sender {
@@ -129,7 +130,10 @@
     return YES;
 }
 
-
+- (void)loggedIn{
+   
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 
 
 
