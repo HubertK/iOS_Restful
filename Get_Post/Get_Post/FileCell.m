@@ -9,7 +9,7 @@
 #import "FileCell.h"
 
 @implementation FileCell
-@synthesize fileImage,nameOfFile;
+@synthesize fileImage,nameOfFile,fileType;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

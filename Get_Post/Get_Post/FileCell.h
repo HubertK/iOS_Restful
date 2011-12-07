@@ -10,5 +10,6 @@
 
 @interface FileCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *nameOfFile;
+@property (weak, nonatomic) IBOutlet UILabel *fileType;
 @property (weak, nonatomic) IBOutlet UIImageView *fileImage;
 @end

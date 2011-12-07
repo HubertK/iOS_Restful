@@ -101,14 +101,17 @@
     if (cell == nil) {
         cell = [[FileCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    
-    cell.nameOfFile.text = [[files valueForKey:@"path"]objectAtIndex:indexPath.section];
+    NSString *theFile = [[files valueForKey:@"path"]objectAtIndex:indexPath.section];
+    cell.nameOfFile.text = theFile;
     NSString *type = [[files valueForKey:@"type"]objectAtIndex:indexPath.section];
     if ([type isEqualToString:@"tree"]) {
         cell.fileImage.image = [UIImage imageNamed:@"folder.png"];
+        cell.fileType.text = nil;
     }
     else{
-        cell.fileImage.image = nil;
+        cell.fileImage.image = [UIImage imageNamed:@"fileType.png"];;
+        NSString *ext = [theFile pathExtension];
+        cell.fileType.text = ext;
     }
     return cell;
 }
