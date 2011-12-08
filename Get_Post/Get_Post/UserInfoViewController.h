@@ -22,6 +22,8 @@
 @property (strong, nonatomic) NSURLConnection *infoConnection;
 @property (strong, nonatomic) NSURLConnection *repoConnection;;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *logButton;
+
+
 - (IBAction)logInOut:(id)sender;
 - (IBAction)listRepositories:(id)sender;
 - (void)loadUserInfo;

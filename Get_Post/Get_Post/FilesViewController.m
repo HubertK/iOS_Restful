@@ -30,11 +30,14 @@
     
     // Release any cached data, images, etc that aren't in use.
 }
-
+- (void)received:(NSNotification*)notif{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
+     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(received:) name:@"PopMaster" object:nil];
     [super viewDidLoad];
     self.tableView.backgroundView = [[UIView alloc]init];
     self.tableView.backgroundColor  = [UIColor colorWithPatternImage:[UIImage imageNamed:@"subtlePat1.png"]];

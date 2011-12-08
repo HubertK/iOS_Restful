@@ -21,4 +21,5 @@
 - (void)getinformation:(NSString*)repoURLString;
 - (void)fetchedData:(NSData *)responseData;
 - (void)getIconForUser:(NSString*)iconURL;
+- (IBAction)seeProfile:(id)sender;
 @end

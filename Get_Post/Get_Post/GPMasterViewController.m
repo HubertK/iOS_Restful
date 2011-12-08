@@ -28,7 +28,13 @@
     [super didReceiveMemoryWarning];
     // Release any cached data, images, etc that aren't in use.
 }
-
+- (void)received:(NSNotification*)notif{
+    NSLog(@"PopMaster Notification Receiver");
+    [self.repoDictionary removeAllObjects];
+    [self.repoDictionary setDictionary:[NSDictionary dictionaryWithObjectsAndKeys:@"Press Repos Button to see your Repositories",@"NO REPOS", nil]];
+    [self.tableView reloadData];
+    
+}
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
@@ -36,6 +42,7 @@
     self.tableView.backgroundView = [[UIView alloc]init];
     self.tableView.backgroundColor  = [UIColor colorWithPatternImage:[UIImage imageNamed:@"subtlePat1.png"]];
     self.repoDictionary = [[NSMutableDictionary alloc]init];
+     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(received:) name:@"PopMaster" object:nil];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(allReposNotification:) name:@"AllReposNotification" object:nil];
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
@@ -153,6 +160,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     NSString *repository = cell.textLabel.text;
+    if ([repository isEqualToString:@"NO REPOS"]) {
+        return;
+    }
     self.repoPicked = repository;
     [self getCommitsForRepo:repository];
     

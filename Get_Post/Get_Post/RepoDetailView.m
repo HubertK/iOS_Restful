@@ -208,6 +208,11 @@
     }
 }
 
+- (IBAction)seeProfile:(id)sender {
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"PopMaster" object:nil];
+    [self dismissModalViewControllerAnimated:YES];
+}
+
 
 
 

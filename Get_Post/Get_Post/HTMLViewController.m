@@ -147,6 +147,12 @@
     [self.spinner stopAnimating];
 }
 
+- (IBAction)showUser:(id)sender {
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"PopMaster" object:nil];
+    [self.presentingViewController.presentingViewController dismissModalViewControllerAnimated:YES];
+
+}
+
 - (void)notificationReceived:(NSNotification*)ntification{
     [self dismissModalViewControllerAnimated:NO];
 }

@@ -25,6 +25,7 @@
 @synthesize logButton;
 @synthesize repoConnection,infoConnection;
 
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -270,6 +271,7 @@
     self.repos.text = nil;
     self.avatar.image = nil;
 }
+
 
 
 

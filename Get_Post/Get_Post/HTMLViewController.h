@@ -19,4 +19,5 @@
 @property (weak, nonatomic) IBOutlet UIImageView *myImageView;
 @property (nonatomic) BOOL isText;
 - (void)reloadWeb:(NSString*)aString;
+- (IBAction)showUser:(id)sender;
 @end
