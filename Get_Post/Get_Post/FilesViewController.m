@@ -250,11 +250,13 @@
     NSDictionary *userInfo = [NSDictionary dictionaryWithObjectsAndKeys:actualString,@"content",filename,@"filename",[NSNumber numberWithBool:YES],@"isText", nil];
    
     [[NSNotificationCenter defaultCenter] postNotificationName:@"PushHTMLView" object:nil userInfo:userInfo];
+       
     }
     else{
        
          NSDictionary *userInfo = [NSDictionary dictionaryWithObjectsAndKeys:data2,@"content",filename,@"filename",[NSNumber numberWithBool:NO],@"isText", nil];
         [[NSNotificationCenter defaultCenter] postNotificationName:@"PushHTMLView" object:nil userInfo:userInfo];
+         
     }
     
 }

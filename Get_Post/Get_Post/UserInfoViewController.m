@@ -9,6 +9,7 @@
 #import "UserInfoViewController.h"
 #import "LoginViewController.h"
 #import "HTMLViewController.h"
+#import "RepoDetailView.h"
 
 @implementation UserInfoViewController
 @synthesize company;
@@ -55,9 +56,22 @@
 - (void)viewDidLoad
 {
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(received:) name:@"PushHTMLView" object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(receivedRepoInfo:) name:@"RepoInfoNotification" object:nil];
     [super viewDidLoad];
 }
+- (void)receivedRepoInfo:(NSNotification*)notification{
+    UIStoryboard *story = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+    RepoDetailView *controller = [story instantiateViewControllerWithIdentifier:@"RepoDetailViewController"];
+    NSString *URL = [notification.userInfo valueForKey:@"repoURL"];
+    NSLog(@"RepoInfo Notification sending URL:%@",URL);
+    [controller dismissModalViewControllerAnimated:NO];
+    [controller setURLString:URL];
+    [self presentModalViewController:controller animated:YES];
+}
 - (void)received:(NSNotification*)notification{
+    if (self.presentedViewController == self) {
+        NSLog(@"USERINFO");
+    }
     UIStoryboard *story = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
     HTMLViewController *controller = [story instantiateViewControllerWithIdentifier:@"HTMLViewController"];
     NSString *filename = [notification.userInfo valueForKey:@"filename"];
@@ -176,7 +190,8 @@
         
       NSLog(@"Received Repo Data:%@",[json description]);
     [[NSNotificationCenter defaultCenter]postNotificationName:@"AllReposNotification" object:nil userInfo:json];
-        
+       
+         
     }
     
    else if (connection == self.infoConnection) {

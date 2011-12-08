@@ -62,7 +62,7 @@ bool isPrivate;
 
 - (void)viewDidLoad
 {
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(received:) name:@"PushHTMLView" object:nil];
+  //  [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(received:) name:@"PushHTMLView" object:nil];
 
 //    NSFileManager *filemgr;
 //    NSString *currentpath;

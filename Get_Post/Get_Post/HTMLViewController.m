@@ -39,15 +39,56 @@
 {
 }
 */
+-(void)received:(NSNotification*)notification{
+ //   UIStoryboard *story = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+  //  HTMLViewController *controller = [story instantiateViewControllerWithIdentifier:@"HTMLViewController"];
+    NSString *newfilename = [notification.userInfo valueForKey:@"filename"];
+//    [controller setFile:newfilename];
+    self.filename.text = newfilename;
+    NSLog(@"HTML in HTML notification");
+    
+    if ([[notification.userInfo valueForKey:@"isText"]isEqualToNumber:[NSNumber numberWithBool:YES]]) {
+        NSLog(@"Notification YES");
+        NSString *newcontent = [notification.userInfo valueForKey:@"content"];
+        self.content = newcontent;
+ //       [controller setContent:newcontent];
+        self.isText = YES;
+        NSLog(@"IS TEXT!");  
+        
+        [self.myWebView setHidden:NO];
+        [self.myImageView setHidden:YES];
+
+        [self reloadWeb:self.content];
+  //      [controller setIsText:YES];  
+        
+    }
+    else if ([[notification.userInfo valueForKey:@"isText"]isEqualToNumber:[NSNumber numberWithBool:NO]]){
+        NSLog(@"Notification NO");
+     //   [controller setIsText:NO];
+        self.isText = NO;
+   //     [controller setImageData:[notification.userInfo valueForKey:@"content"]];
+        self.imageData = [notification.userInfo valueForKey:@"content"];
+        
+        [self.myWebView setHidden:YES];
+        [self.myImageView setHidden:NO];
+        self.myImageView.image = [UIImage imageWithData:self.imageData];
+
+    }
+    
+    
+    
+       
+}
 
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
-{     
+{  
+     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(received:) name:@"PushHTMLView" object:nil];
      [self.spinner startAnimating];
 //    self.myWebView.scrollView.layer.cornerRadius = 20;
 //    self.myWebView.layer.cornerRadius = 20;
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(notificationReceived:) name:@"dismissView" object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(notificationReceived:) name:@"DismisstheView" object:nil];
     if (isText == YES) {
         NSLog(@"IS TEXT!");  
     self.filename.text = self.file;

@@ -9,12 +9,13 @@
 #import "GPMasterViewController.h"
 #import "CommitsViewController.h"
 #import "GPDetailViewController.h"
+#import "RepoDetailView.h"
 
 @implementation GPMasterViewController
 
 @synthesize detailViewController = _detailViewController;
 @synthesize repoDictionary,URLConnection,repoPicked;
-
+@synthesize JSONDictionary;
 - (void)awakeFromNib
 {
     self.clearsSelectionOnViewWillAppear = NO;
@@ -76,6 +77,8 @@
 }
 - (void)allReposNotification:(NSNotification*)notification{
     [self setTitle:@"Repositories"];
+    self.JSONDictionary = [notification.userInfo mutableCopy];
+    
     for (int i = 0; i < [notification.userInfo count]; i++) {
         NSString *theName = [[notification.userInfo valueForKey:@"name"]objectAtIndex:i];;
         id description = [[notification.userInfo valueForKey:@"description"]objectAtIndex:i];
@@ -152,6 +155,16 @@
     NSString *repository = cell.textLabel.text;
     self.repoPicked = repository;
     [self getCommitsForRepo:repository];
+    
+    NSString *repoURL = nil;
+    for (int i = 0; i < [JSONDictionary count]; i++) {
+        if ([[[JSONDictionary valueForKey:@"name"]objectAtIndex:i] isEqualToString:self.repoPicked]) {
+            repoURL = [[JSONDictionary valueForKey:@"url"]objectAtIndex:i];
+        }
+    }
+    NSDictionary *userInfo = [[NSDictionary alloc]initWithObjectsAndKeys:repoURL,@"repoURL", nil];
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"DismisstheView" object:nil];
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"RepoInfoNotification" object:nil userInfo:userInfo];
 }
 
 -(void)getCommitsForRepo:(NSString *)repo{

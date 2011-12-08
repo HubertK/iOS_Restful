@@ -83,6 +83,11 @@
 		575C0B6A148EC06100108833 /* subtlePat1.png in Resources */ = {isa = PBXBuildFile; fileRef = 575C0B66148EC06100108833 /* subtlePat1.png */; };
 		575C0B6B148EC06100108833 /* subtlePat2.png in Resources */ = {isa = PBXBuildFile; fileRef = 575C0B67148EC06100108833 /* subtlePat2.png */; };
 		575C0B6F148EC26F00108833 /* FileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C0B6E148EC26F00108833 /* FileCell.m */; };
+		578D4DC1148FFECE000A0165 /* pat6.png in Resources */ = {isa = PBXBuildFile; fileRef = 578D4DC0148FFECE000A0165 /* pat6.png */; };
+		578D4DC4148FFED3000A0165 /* commentBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 578D4DC3148FFED3000A0165 /* commentBack.png */; };
+		578D4DC614900B2A000A0165 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 578D4DC514900B2A000A0165 /* user.png */; };
+		578D4DC814900B97000A0165 /* user-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 578D4DC714900B97000A0165 /* user-icon.png */; };
+		578D4DCB14900F41000A0165 /* RepoDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 578D4DCA14900F40000A0165 /* RepoDetailView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -183,6 +188,12 @@
 		575C0B67148EC06100108833 /* subtlePat2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = subtlePat2.png; sourceTree = "<group>"; };
 		575C0B6D148EC26E00108833 /* FileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileCell.h; sourceTree = "<group>"; };
 		575C0B6E148EC26F00108833 /* FileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileCell.m; sourceTree = "<group>"; };
+		578D4DC0148FFECE000A0165 /* pat6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pat6.png; sourceTree = "<group>"; };
+		578D4DC3148FFED3000A0165 /* commentBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = commentBack.png; sourceTree = "<group>"; };
+		578D4DC514900B2A000A0165 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
+		578D4DC714900B97000A0165 /* user-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user-icon.png"; sourceTree = "<group>"; };
+		578D4DC914900F40000A0165 /* RepoDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepoDetailView.h; sourceTree = "<group>"; };
+		578D4DCA14900F40000A0165 /* RepoDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepoDetailView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +262,8 @@
 				571C848D148826A000C97DAC /* LoginViewController.m */,
 				39B211BA14887E730049E014 /* UserInfoViewController.h */,
 				39B211BB14887E730049E014 /* UserInfoViewController.m */,
+				578D4DC914900F40000A0165 /* RepoDetailView.h */,
+				578D4DCA14900F40000A0165 /* RepoDetailView.m */,
 				39B21211148B16340049E014 /* CommitCell.h */,
 				39B21212148B16340049E014 /* CommitCell.m */,
 				575C0B6D148EC26E00108833 /* FileCell.h */,
@@ -268,6 +281,10 @@
 		398D704A1486EBCF009D1446 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				578D4DC3148FFED3000A0165 /* commentBack.png */,
+				578D4DC714900B97000A0165 /* user-icon.png */,
+				578D4DC514900B2A000A0165 /* user.png */,
+				578D4DC0148FFECE000A0165 /* pat6.png */,
 				39B21332148F06260049E014 /* gitLocate.png */,
 				39B21336148F08930049E014 /* briefcase_64px.png */,
 				39B21334148F072A0049E014 /* loc.png */,
@@ -472,6 +489,10 @@
 				39B21333148F06270049E014 /* gitLocate.png in Resources */,
 				39B21335148F072A0049E014 /* loc.png in Resources */,
 				39B21337148F08930049E014 /* briefcase_64px.png in Resources */,
+				578D4DC1148FFECE000A0165 /* pat6.png in Resources */,
+				578D4DC4148FFED3000A0165 /* commentBack.png in Resources */,
+				578D4DC614900B2A000A0165 /* user.png in Resources */,
+				578D4DC814900B97000A0165 /* user-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +521,7 @@
 				39B21223148B35E50049E014 /* ISO8601DateFormatter.m in Sources */,
 				39B212F2148D67DF0049E014 /* HTMLViewController.m in Sources */,
 				575C0B6F148EC26F00108833 /* FileCell.m in Sources */,
+				578D4DCB14900F41000A0165 /* RepoDetailView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

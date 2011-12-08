@@ -14,6 +14,7 @@
 
 @property (strong, nonatomic) GPDetailViewController *detailViewController;
 @property (strong, nonatomic) NSMutableDictionary *repoDictionary;
+@property (strong, nonatomic) NSMutableDictionary *JSONDictionary;
 @property (strong, nonatomic) NSString *repoPicked;
 @property (weak, nonatomic) NSURLConnection *URLConnection;
 
